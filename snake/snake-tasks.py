@@ -2,9 +2,9 @@ from tkinter import Tk, Canvas # Подключаем модуль
 import random # Модуль генерирования случайных чисел
 
 # Глобальные переменные 
-WIDTH = 800
-HEIGHT = 600
-SEG_SIZE = 20
+WIDTH = 400
+HEIGHT = 400
+SEG_SIZE = 10
 IN_GAME = True
 
 #Создаем блок
