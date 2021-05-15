@@ -5,5 +5,4 @@ root = Tk()
 root.title("My Game")
 
 
-
 root.mainloop()
