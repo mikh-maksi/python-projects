@@ -1,8 +1,8 @@
 from tkinter import Tk, Canvas # Подключаем модуль
 import random # Модуль генерирования случайных чисел
 
-WIDTH =300
-HEIGHT=300
+WIDTH = 300
+HEIGHT= 300
 BACKCOLOR = "#003300"
 FONTSIZE1 = "Arial 15"
 FONTSIZE2 = "Arial 20"
@@ -10,6 +10,8 @@ FONTSIZE2 = "Arial 20"
 
 def clicked(event):
     print("click")
+    c.itemconfigure(restart_text, state='hidden')
+    c.itemconfigure(game_over_text, state='hidden')
 
 root = Tk()
 root.title("My Game")
