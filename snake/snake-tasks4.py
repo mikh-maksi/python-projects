@@ -21,12 +21,12 @@ c.focus_set()
 
 game_over_text = c.create_text(WIDTH/2, HEIGHT/2, text="GAME OVER!",
                                font=FONTSIZE1, fill='red',
-                               state='normal')
+                               state='hidden')
 restart_text = c.create_text(WIDTH/2, HEIGHT-HEIGHT/3,
                              font=FONTSIZE2,
                              fill='white',
                              text="Click here to restart",
-                             state='normal')
+                             state='hidden')
 
 
 root.mainloop()
