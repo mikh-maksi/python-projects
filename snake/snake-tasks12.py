@@ -58,6 +58,7 @@ class Snake(object):   # Создаем змею
         # Начальное направление движение - выносим в глобальные переменныеы
         self.vector = self.mapping["Down"]
 
+
     def move(self):
         print("move")
         for index in range(len(self.segments)-1):  # проходимся по каждому сегментику, начиная с 0
@@ -68,7 +69,7 @@ class Snake(object):   # Создаем змею
         x1, y1, x2, y2 = c.coords(self.segments[-2].instance) # Получаем координаты
         c.coords(self.segments[-1].instance,  # Рисуем новый сегмент
                  x1+self.vector[0]*SEG_SIZE, y1+self.vector[1]*SEG_SIZE,
-                 x2+self.vector[0]*SEG_SIZE, y2+self.vector[1]*SEG_SIZE)        
+                 x2+self.vector[0]*SEG_SIZE, y2+self.vector[1]*SEG_SIZE)   
 
 def create_snake():
     # creating segments and snake
@@ -99,17 +100,17 @@ c.focus_set()
 
 game_over_text = c.create_text(WIDTH/2, HEIGHT/2, text="GAME OVER!",
                                font=FONTSIZE1, fill='red',
-                               state='normal')
+                               state='hidden')
 restart_text = c.create_text(WIDTH/2, HEIGHT-HEIGHT/3,
                              font=FONTSIZE2,
                              fill='white',
                              text="Click here to restart",
-                             state='normal')
+                             state='hidden')
 
 c.tag_bind(restart_text, "<Button-1>", clicked)
 
 
-s = create_snake()
+
 
 start_game()
 root.mainloop()
