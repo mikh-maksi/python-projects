@@ -12,8 +12,8 @@ FONTSIZE2 = "Arial 20"
 def clicked(event):
     print(event.x)
     print(event.y)
-    # c.itemconfigure(restart_text, state='hidden')
-    # c.itemconfigure(game_over_text, state='hidden')
+    c.itemconfigure(restart_text, state='hidden')
+    c.itemconfigure(game_over_text, state='hidden')
     create_block()
 
 def create_block(): # Функци
@@ -49,6 +49,13 @@ def create_snake():
                 Segment(SEG_SIZE*3, SEG_SIZE)]
     return Snake(segments)
 
+def start_game(): # Функция, которая стартует игру
+    global s # Определяем глобальную переменную
+    create_block()  # Создаем блоу
+    s = create_snake() # создаем змейку
+    # c.bind("<KeyPress>", s.change_direction) # устанавливаем реакцию на нажатие кнопки.
+    # main() # Запускаем программу
+
 
 
 root = Tk()
@@ -76,5 +83,5 @@ c.tag_bind(restart_text, "<Button-1>", clicked)
 
 s = create_snake()
 
-
+start_game()
 root.mainloop()
